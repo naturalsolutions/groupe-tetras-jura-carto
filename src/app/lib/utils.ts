@@ -28,7 +28,7 @@ export function filterAuthorizedPathsData(
     return { type: "FeatureCollection", features: [] };
 
   const isTransportActive = modeTransport !== null;
-  const isZoneActive = zoneNames.length > 0;
+  // const isZoneActive = zoneNames.length > 0;
   const isDateActive = selectedDate !== null;
 
   let selectedDay: number, selectedMonth: number;
@@ -38,7 +38,7 @@ export function filterAuthorizedPathsData(
     selectedMonth = date.month() + 1;
   }
 
-  const zoneSet = new Set(zoneNames);
+  // const zoneSet = new Set(zoneNames);
 
   return {
     type: "FeatureCollection",
@@ -58,8 +58,8 @@ export function filterAuthorizedPathsData(
             return false;
           }
         }
-        if (isZoneActive && !zoneSet.has(feature.properties.zone_names as Zone))
-          return false;
+        // if (isZoneActive && !zoneSet.has(feature.properties.zone_names as Zone))
+          // return false;
 
         if (isDateActive) {
           const { Période_autorisation } = feature.properties;

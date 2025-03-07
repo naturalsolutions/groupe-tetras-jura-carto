@@ -243,8 +243,8 @@ export const Legend = () => {
               ></Box>
               <span>{`Non réglementé par l'APPB`}</span>
             </Box>
-
-            <Box style={{ display: "flex", alignItems: "center" }}>
+              
+            <Box style={{ display: "flex", alignItems: "center", marginBottom: "15px"}}>
               <Box
                 style={{
                   width: 20,
@@ -255,6 +255,7 @@ export const Legend = () => {
               ></Box>
               <span>{`Si déneigé`}</span>
             </Box>
+            
             <Box>
               <span>
                 <strong>Aires protégées</strong>
@@ -279,7 +280,7 @@ export const Legend = () => {
                     />
                   </svg>
                   <span style={{ marginLeft: 10 }}>
-                    Arrêtés Préfectoraux de Protection de Biotopes
+                    {`Arrêté Préfectoral de Protection de Biotope "Forêts d'altitude du Haut-Jura"`}
                   </span>
                 </div>
               </Box>
@@ -304,7 +305,7 @@ export const Legend = () => {
                       />
                     </svg>
                     <span style={{ marginLeft: 10 }}>
-                      Autres Arrêtés Préfectoraux de Protection de Biotopes
+                      Autres Arrêtés Préfectoraux de Protection de Biotope
                     </span>
                   </div>
                   <IconButton onClick={() => toggleLayer("other-appb-source")}>
